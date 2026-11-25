@@ -5,8 +5,8 @@ interface Skill {
   name: string;
   category:
   | 'Programming Languages'
-  | 'Frameworks & Libraries'
-  | 'Databases'
+  | 'Frameworks & Desktop/Web Tech'
+  | 'Databases & Data Storage'
   | 'Web Technologies'
   | 'Tools & Software';
   color: string;
@@ -18,30 +18,45 @@ const SkillsSection: React.FC = () => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const skills: Skill[] = [
-    { name: 'JavaScript', category: 'Programming Languages', color: '#F7DF1E' },
-    { name: 'Java', category: 'Programming Languages', color: '#007396' },
-    { name: 'PHP', category: 'Programming Languages', color: '#777BB4' },
-    { name: 'SQL', category: 'Programming Languages', color: '#4479A1' },
-    { name: 'Python', category: 'Programming Languages', color: '#3776AB' },
     { name: 'C#', category: 'Programming Languages', color: '#239120' },
-    { name: 'React.js', category: 'Frameworks & Libraries', color: '#61DAFB' },
-    { name: 'Node.js', category: 'Frameworks & Libraries', color: '#339933' },
-    { name: 'Next.js', category: 'Frameworks & Libraries', color: '#000000' },
-    { name: 'ASP.NET MVC5', category: 'Frameworks & Libraries', color: '#512BD4' },
-    { name: 'MySQL', category: 'Databases', color: '#4479A1' },
-    { name: 'MongoDB', category: 'Databases', color: '#47A248' },
-    { name: 'Convex', category: 'Databases', color: '#FF6B6B' },
-    { name: 'Inngest', category: 'Databases', color: '#6366F1' },
-    { name: 'phpMyAdmin', category: 'Databases', color: '#6C78AF' },
+    { name: 'JavaScript (ES6+)', category: 'Programming Languages', color: '#F7DF1E' },
+    { name: 'TypeScript', category: 'Programming Languages', color: '#3178C6' },
+    { name: 'SQL', category: 'Programming Languages', color: '#4479A1' },
+    { name: 'PHP', category: 'Programming Languages', color: '#777BB4' },
+    { name: 'Python', category: 'Programming Languages', color: '#3776AB' },
+    { name: 'HTML5/CSS3', category: 'Programming Languages', color: '#E34F26' },
+
+    { name: 'WPF (.NET 10)', category: 'Frameworks & Desktop/Web Tech', color: '#512BD4' },
+    { name: 'MVVM', category: 'Frameworks & Desktop/Web Tech', color: '#68217A' },
+    { name: 'ASP.NET', category: 'Frameworks & Desktop/Web Tech', color: '#512BD4' },
+    { name: 'React.js', category: 'Frameworks & Desktop/Web Tech', color: '#61DAFB' },
+    { name: 'Next.js', category: 'Frameworks & Desktop/Web Tech', color: '#000000' },
+    { name: 'Node.js', category: 'Frameworks & Desktop/Web Tech', color: '#339933' },
+    { name: 'Express.js', category: 'Frameworks & Desktop/Web Tech', color: '#828282' },
+    { name: 'Tailwind CSS', category: 'Frameworks & Desktop/Web Tech', color: '#06B6D4' },
+
+    { name: 'SQLite', category: 'Databases & Data Storage', color: '#003B57' },
+    { name: 'MySQL', category: 'Databases & Data Storage', color: '#4479A1' },
+    { name: 'MongoDB', category: 'Databases & Data Storage', color: '#47A248' },
+    { name: 'Convex', category: 'Databases & Data Storage', color: '#FF6B6B' },
+
     { name: 'HTML5', category: 'Web Technologies', color: '#E34F26' },
     { name: 'CSS3', category: 'Web Technologies', color: '#1572B6' },
     { name: 'TailwindCSS', category: 'Web Technologies', color: '#06B6D4' },
     { name: 'Bootstrap', category: 'Web Technologies', color: '#7952B3' },
-    { name: 'jQuery', category: 'Web Technologies', color: '#0769AD' },
+
     { name: 'GitHub', category: 'Tools & Software', color: '#181717' },
     { name: 'VS Code', category: 'Tools & Software', color: '#007ACC' },
     { name: 'Docker', category: 'Tools & Software', color: '#2496ED' },
     { name: 'Microsoft Office 365', category: 'Tools & Software', color: '#D83B01' },
+    { name: 'Git/GitHub', category: 'Tools & Software', color: '#F05032' },
+    { name: 'EPPlus', category: 'Tools & Software', color: '#217346' },
+    { name: 'ClosedXML', category: 'Tools & Software', color: '#1D6F42' },
+    { name: 'PDFsharp', category: 'Tools & Software', color: '#EC1C24' },
+    { name: 'Chart.js', category: 'Tools & Software', color: '#FF6384' },
+    { name: 'Socket.io', category: 'Tools & Software', color: '#010101' },
+    { name: 'REST APIs', category: 'Tools & Software', color: '#009688' },
+    { name: 'Inngest', category: 'Tools & Software', color: '#6366F1' },
   ];
 
   useEffect(() => {
@@ -182,8 +197,8 @@ const SkillsSection: React.FC = () => {
 
   const categories = [
     'Programming Languages',
-    'Frameworks & Libraries',
-    'Databases',
+    'Frameworks & Desktop/Web Tech',
+    'Databases & Data Storage',
     'Web Technologies',
     'Tools & Software',
   ];
