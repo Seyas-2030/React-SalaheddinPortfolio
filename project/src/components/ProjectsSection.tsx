@@ -9,6 +9,7 @@ import image7 from '../assets/zu-schedule-system.png';
 import image8 from '../assets/react-workout-app.png';
 import image9 from '../assets/text-to-voice.png';
 import image10 from '../assets/portfolio-preview.svg';
+const image11 = 'https://raw.githubusercontent.com/Seyas-2030/NiceCoffeeStore/main/src/NiceCoffee/wwwroot/img/SAC.jpg';
 
 interface Project {
   id: number;
@@ -100,6 +101,14 @@ const ProjectsSection: React.FC = () => {
       image: image10,
       technologies: ["React.js", "TypeScript", "Three.js", "Tailwind CSS"],
       githubUrl: "https://github.com/Seyas-2030/React-SalaheddinPortfolio"
+    },
+    {
+      id: 11,
+      title: "NiceCoffeeStore (ASP.NET Core MVC)",
+      description: "Full-stack coffee store web application built with ASP.NET Core 10 MVC, Entity Framework Core, MySQL, ASP.NET Identity, SignalR real-time order notifications, shopping cart, checkout with Luhn card validation, loyalty points, Admin dashboard, Docker, and xUnit tests.",
+      image: image11,
+      technologies: ["C#", "ASP.NET Core 10 MVC", "EF Core", "MySQL", "SignalR", "Docker", "xUnit"],
+      githubUrl: "https://github.com/Seyas-2030/NiceCoffeeStore"
     }
   ];
 
